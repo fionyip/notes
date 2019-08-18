@@ -19,14 +19,14 @@ h: hypothesis ,我們想要出來的成品，能用於減少人手工作的工�
 這次的h 是這樣的
 <img src="http://latex.codecogs.com/gif.latex?\$$h(x)_{\theta}=\theta_{0}+\theta_{1}x$$" />
 
-那各個$ \theta $ 是怎來的？
+那各個<img src="http://latex.codecogs.com/gif.latex?$ \theta $ " />是怎來的？
 其實和小時後求二元一次方程很像，也是把手上的的x,y放進hypothesie，再算出
-$$  \theta_{0} + \theta_{1}  $$
-![](/home/fion/note/jpd/download4.png) 
+<img src="http://latex.codecogs.com/gif.latex?$$  \theta_{0} + \theta_{1}  $$ " />
+![](jpd/download4.png) 
 (中二數學課即視感）
 
 當然，真的應用上找theta 自然不會如此簡單，中二數學只會有一點，兩點，最多三點，現在是有N點在圖上。
-![](/home/fion/note/jpd/download5.png) 
+![](jpd/download5.png) 
 
 y: 真實的需要預測的值，例如之前現實世界中的俄勒岡州的樓價，就屬於此。
 h(x):預測的樓價。
@@ -37,10 +37,11 @@ x:特徵值，上例中的房子大小。
 
 先將誤差變成公式：
 一個誤差：
-$$ (h_{\theta}(x)- y) $$
+<img src="http://latex.codecogs.com/gif.latex?$$ (h_{\theta}(x)- y) $$ " />
 
 整個模型的誤差：
-$$ \sum_{i=1}^{m}  (h_{\theta}(x)^{i} - y^{i} ) $$
+<img src="http://latex.codecogs.com/gif.latex?$$ \sum_{i=1}^{m}  (h_{\theta}(x)^{i} - y^{i} ) $$ " />
+
 m 是有過放進去訓練的樣本數量。
 這條公式叫cost function（代價涵數)和loss function 不是一回事。
 ref :[link](https://www.coursera.org/learn/neural-networks-deep-learning/lecture/yWaRd/logistic-regression-cost-function) 
@@ -52,20 +53,19 @@ ref:
  因為取最小二乘法時需要對代價涵數進行偏導數，故留下1/2,1/m則是因為取平均誤差所致。
  
  對使用最小二乘法後的代價涵數為：
- 
- $$ J(\theta_{0},\theta_{1}) = \frac{1}{2m} \sum_{i=1}^{m}  (h_{\theta}(x)^{i} - y^{i}) $$
+ <img src="http://latex.codecogs.com/gif.latex? $$ J(\theta_{0},\theta_{1}) = \frac{1}{2m} \sum_{i=1}^{m}  (h_{\theta}(x)^{i} - y^{i}) $$" />
 
  目標：
- $$ minimize {\space}_{\theta_{0},\theta_{1}}  J(\theta_{0},\theta_{1}) $$
- 
+ <img src="http://latex.codecogs.com/gif.latex?$$ (h_{\theta}(x)- y) $$ $$ minimize {\space}_{\theta_{0},\theta_{1}}  J(\theta_{0},\theta_{1}) $$ " />
+
  
  所以，目前有：
- ![](/home/fion/note/jpd/download6.png) 
+ ![](note/jpd/download6.png) 
  （懶的打）
  我怎麼知道我用的工具，最小二乘法可以找到$\theta_{0},\theta_{1}$ 就是最小的？
  考慮中三的數學水不，一點一點地畫在圖上
  （真的是報應，小時候最討厭畫圖了）
- ![](/home/fion/note/jpd/download7.png) 
+ ![](note/jpd/download7.png) 
  
  左圖是假設涵數，右圖就是代價涵數。先在左圖中找到
  $$h_{\theta}(x^{i})$$
@@ -75,7 +75,7 @@ $$minimize {\space}_{\theta_{0},\theta_{1}}  J(\theta_{0},\theta_{1}) =0 $$
 
 如果出現很多個特徵值呢？
 很多時候不會出現只有一個x的情況，所以theta也不會只有一個兩個的情況發生
-![](/home/fion/note/jpd/download8.png) 
+![](note/jpd/download8.png) 
 
 這種情況下的最小二乘法就不太好用了。
 
